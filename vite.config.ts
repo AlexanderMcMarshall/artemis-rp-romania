@@ -7,13 +7,13 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
-    base: "/artemis-rp-romania/",
     port: 8080,
     hmr: {
       overlay: false,
     },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  base: "/artemis-rp-romania/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
