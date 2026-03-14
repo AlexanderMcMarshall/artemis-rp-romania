@@ -147,7 +147,7 @@ export default function Dashboard() {
           </Link>
           <Link
             to="/regulament"
-            className="rounded-2xl border border-border bg-gradient-card p-5 text-center transition-all hover:border-primary/30 hover:glow-blue"
+            className="rounded-2xl border border-border bg-gradient-card p-5 text-center transition-all hover:border-primary/30 hover:glow-red"
           >
             <Shield className="mx-auto mb-2 h-6 w-6 text-primary" />
             <span className="text-sm font-medium text-foreground">Regulament</span>

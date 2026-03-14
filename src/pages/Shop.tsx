@@ -108,7 +108,7 @@ export default function Shop() {
 
               <button className={`w-full rounded-xl py-2.5 text-sm font-semibold transition-all ${
                 pkg.featured
-                  ? "bg-primary text-primary-foreground hover:glow-blue-strong"
+                  ? "bg-primary text-primary-foreground hover:glow-red-strong"
                   : "border border-border text-foreground hover:bg-secondary hover:border-primary/30"
               }`}>
                 Donează {pkg.price}
