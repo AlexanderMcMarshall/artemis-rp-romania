@@ -71,7 +71,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
                   href="#"
-                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:glow-blue-strong animate-pulse-glow"
+                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:glow-red-strong animate-pulse-glow"
                 >
                   Începe Joaca
                   <ArrowRight size={16} />
