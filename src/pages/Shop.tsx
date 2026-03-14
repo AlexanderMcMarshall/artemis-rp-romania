@@ -75,8 +75,8 @@ export default function Shop() {
               transition={{ delay: i * 0.1 }}
               className={`relative rounded-2xl border p-6 transition-all ${
                 pkg.featured
-                  ? "border-primary/40 bg-gradient-card glow-blue"
-                  : "border-border bg-gradient-card hover:border-primary/30 hover:glow-blue"
+                  ? "border-primary/40 bg-gradient-card glow-red"
+                  : "border-border bg-gradient-card hover:border-primary/30 hover:glow-red"
               }`}
             >
               {pkg.featured && (
@@ -108,7 +108,7 @@ export default function Shop() {
 
               <button className={`w-full rounded-xl py-2.5 text-sm font-semibold transition-all ${
                 pkg.featured
-                  ? "bg-primary text-primary-foreground hover:glow-blue-strong"
+                  ? "bg-primary text-primary-foreground hover:glow-red-strong"
                   : "border border-border text-foreground hover:bg-secondary hover:border-primary/30"
               }`}>
                 Donează {pkg.price}

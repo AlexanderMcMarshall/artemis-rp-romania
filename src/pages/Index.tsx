@@ -71,7 +71,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
                   href="#"
-                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:glow-blue-strong animate-pulse-glow"
+                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:glow-red-strong animate-pulse-glow"
                 >
                   Începe Joaca
                   <ArrowRight size={16} />
@@ -111,7 +111,7 @@ const Index = () => {
             className="text-center mb-16"
           >
             <h2 className="font-display text-4xl md:text-5xl font-bold uppercase tracking-tight text-foreground mb-4">
-              De ce <span className="text-gradient-blue">Artemis</span>?
+              De ce <span className="text-gradient-red">Artemis</span>?
             </h2>
             <p className="text-muted-foreground max-w-md mx-auto">
               Un server construit cu pasiune, pentru jucători care apreciază roleplay-ul de calitate.
@@ -127,7 +127,7 @@ const Index = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="group rounded-2xl border border-border bg-gradient-card p-6 transition-all hover:border-primary/30 hover:glow-blue"
+                className="group rounded-2xl border border-border bg-gradient-card p-6 transition-all hover:border-primary/30 hover:glow-red"
               >
                 <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
                   <f.icon className="h-6 w-6 text-primary" />
@@ -159,7 +159,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/login"
-                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground hover:glow-blue-strong transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground hover:glow-red-strong transition-all"
                 >
                   Creează Cont
                 </Link>

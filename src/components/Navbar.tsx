@@ -63,7 +63,7 @@ export function Navbar() {
           </Link>
           <Link
             to="/login"
-            className="flex items-center gap-2 rounded-xl bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-all hover:glow-blue"
+            className="flex items-center gap-2 rounded-xl bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-all hover:glow-red"
           >
             Sign In <LogIn size={16} />
           </Link>

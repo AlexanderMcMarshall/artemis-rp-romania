@@ -66,7 +66,7 @@ export default function Login() {
 
               <button
                 type="submit"
-                className="w-full rounded-xl bg-primary py-3 text-sm font-semibold text-primary-foreground transition-all hover:glow-blue flex items-center justify-center gap-2"
+                className="w-full rounded-xl bg-primary py-3 text-sm font-semibold text-primary-foreground transition-all hover:glow-red flex items-center justify-center gap-2"
               >
                 {isLogin ? "Conectare" : "Creează Cont"}
                 <ArrowRight size={16} />
