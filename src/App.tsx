@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/artemis-rp-romania">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/regulament" element={<Regulament />} />
