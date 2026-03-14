@@ -111,7 +111,7 @@ const Index = () => {
             className="text-center mb-16"
           >
             <h2 className="font-display text-4xl md:text-5xl font-bold uppercase tracking-tight text-foreground mb-4">
-              De ce <span className="text-gradient-blue">Artemis</span>?
+              De ce <span className="text-gradient-red">Artemis</span>?
             </h2>
             <p className="text-muted-foreground max-w-md mx-auto">
               Un server construit cu pasiune, pentru jucători care apreciază roleplay-ul de calitate.
