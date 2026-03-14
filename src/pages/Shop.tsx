@@ -10,7 +10,6 @@ interface ShopPackage {
   icon: React.ElementType;
   benefits: string[];
   featured?: boolean;
-  donationType?: boolean;
 }
 
 const packages: ShopPackage[] = [
@@ -52,21 +51,21 @@ export default function Shop() {
     <div className="min-h-screen bg-gradient-dark">
       <Navbar />
 
-      <div className="pt-20 container mx-auto px-4 pb-24">
-        <div className="py-12 text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-gradient-gold mb-4">
+      <div className="pt-28 container mx-auto px-4 pb-24">
+        <div className="py-8 text-center">
+          <h1 className="font-display text-5xl md:text-6xl font-bold uppercase tracking-tight text-foreground mb-4">
             Magazin & Donații
           </h1>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-xl mx-auto text-sm">
             Susține serverul și primești beneficii exclusive. Artemis Coins pot fi folosiți pentru achiziții in-game.
           </p>
         </div>
 
         {/* Donation Packages */}
-        <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground mb-6">
           Pachete Donații
         </h2>
-        <div className="grid gap-6 md:grid-cols-3 mb-16">
+        <div className="grid gap-4 md:grid-cols-3 mb-16">
           {packages.map((pkg, i) => (
             <motion.div
               key={pkg.name}
@@ -74,29 +73,29 @@ export default function Shop() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`relative rounded-xl border p-6 transition-all ${
+              className={`relative rounded-2xl border p-6 transition-all ${
                 pkg.featured
-                  ? "border-primary bg-gradient-card glow-gold"
-                  : "border-border bg-gradient-card hover:border-primary/40 hover:glow-gold"
+                  ? "border-primary/40 bg-gradient-card glow-blue"
+                  : "border-border bg-gradient-card hover:border-primary/30 hover:glow-blue"
               }`}
             >
               {pkg.featured && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground uppercase tracking-wider">
                   Popular
                 </div>
               )}
 
               <div className="flex items-center gap-3 mb-4">
-                <div className="rounded-lg bg-primary/10 p-2.5">
+                <div className="rounded-xl bg-primary/10 p-2.5">
                   <pkg.icon className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-bold text-foreground">{pkg.name}</h3>
+                  <h3 className="font-display text-lg font-bold uppercase text-foreground">{pkg.name}</h3>
                   <p className="text-xs text-muted-foreground">{pkg.coins} Artemis Coins</p>
                 </div>
               </div>
 
-              <div className="text-3xl font-bold text-foreground mb-6">{pkg.price}</div>
+              <div className="text-3xl font-bold text-foreground mb-6 font-display">{pkg.price}</div>
 
               <ul className="space-y-2 mb-6">
                 {pkg.benefits.map((b) => (
@@ -107,10 +106,10 @@ export default function Shop() {
                 ))}
               </ul>
 
-              <button className={`w-full rounded-lg py-2.5 text-sm font-semibold transition-all ${
+              <button className={`w-full rounded-xl py-2.5 text-sm font-semibold transition-all ${
                 pkg.featured
-                  ? "bg-primary text-primary-foreground hover:glow-gold-strong"
-                  : "border border-primary/30 text-primary hover:bg-primary/10"
+                  ? "bg-primary text-primary-foreground hover:glow-blue-strong"
+                  : "border border-border text-foreground hover:bg-secondary hover:border-primary/30"
               }`}>
                 Donează {pkg.price}
               </button>
@@ -119,10 +118,10 @@ export default function Shop() {
         </div>
 
         {/* Coin Shop */}
-        <h2 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-          <Coins className="text-primary" /> Magazin Artemis Coins
+        <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground mb-6 flex items-center gap-2">
+          <Coins className="text-accent" /> Magazin Artemis Coins
         </h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {coinItems.map((item, i) => (
             <motion.div
               key={item.name}
@@ -130,13 +129,13 @@ export default function Shop() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="rounded-xl border border-border bg-gradient-card p-5 flex items-center justify-between gap-4 transition-all hover:border-primary/30"
+              className="rounded-2xl border border-border bg-gradient-card p-5 flex items-center justify-between gap-4 transition-all hover:border-primary/20"
             >
               <div>
                 <h3 className="text-sm font-semibold text-foreground">{item.name}</h3>
                 <p className="text-xs text-muted-foreground">{item.desc}</p>
               </div>
-              <button className="shrink-0 rounded-lg bg-primary/10 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/20 transition-colors">
+              <button className="shrink-0 rounded-xl bg-accent/10 px-4 py-2 text-sm font-semibold text-accent hover:bg-accent/20 transition-colors">
                 {item.coins} <Coins size={12} className="inline ml-1" />
               </button>
             </motion.div>

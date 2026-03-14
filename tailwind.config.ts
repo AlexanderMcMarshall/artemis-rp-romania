@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Cinzel", "serif"],
+        display: ["Rajdhani", "sans-serif"],
         body: ["Inter", "sans-serif"],
       },
       colors: {
@@ -81,8 +81,8 @@ export default {
           to: { height: "0" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(38 92% 50% / 0.2)" },
-          "50%": { boxShadow: "0 0 30px hsl(38 92% 50% / 0.4)" },
+          "0%, 100%": { boxShadow: "0 0 15px hsl(217 91% 60% / 0.2)" },
+          "50%": { boxShadow: "0 0 25px hsl(217 91% 60% / 0.4)" },
         },
       },
       animation: {

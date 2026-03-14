@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Shield, BookOpen, Users, Gamepad2, ShoppingBag, ArrowRight } from "lucide-react";
+import { Shield, BookOpen, Users, Gamepad2, ShoppingBag, ArrowRight, ChevronRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -43,62 +43,82 @@ const Index = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroBg}
             alt="Artemis Romania City"
-            className="h-full w-full object-cover opacity-40"
+            className="h-full w-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 text-gradient-gold leading-tight">
-              Artemis Romania
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body">
-              Cel mai imersiv server de GTA V Roleplay din România. Scrie-ți povestea în orașul tău.
-            </p>
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="font-display text-6xl md:text-8xl font-bold uppercase tracking-tight text-foreground leading-none mb-6">
+                Artemis<br />Roleplay
+              </h1>
+              <p className="text-base md:text-lg text-muted-foreground max-w-lg mb-10 font-body leading-relaxed">
+                Serverul ARTEMIS, este un server de gaming românesc creat pentru a oferi conținut de calitate și o experiență de joc unică. Cu o comunitate activă, misiuni interactive și activități diverse.
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:glow-gold-strong animate-pulse-glow"
-              >
-                Conectează-te la Server
-                <ArrowRight size={16} />
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:glow-blue-strong animate-pulse-glow"
+                >
+                  Începe Joaca
+                  <ArrowRight size={16} />
+                </a>
+                <div className="glass rounded-xl border border-border px-6 py-3">
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-success animate-pulse" />
+                    <span className="text-sm font-semibold text-foreground">128 Players</span>
+                  </div>
+                  <span className="text-xs text-muted-foreground">( 5 000+ conturi înregistrate )</span>
+                </div>
+              </div>
+
+              {/* Shop card */}
               <Link
-                to="/regulament"
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-all hover:bg-secondary"
+                to="/shop"
+                className="mt-8 inline-flex items-center gap-4 rounded-xl bg-gradient-accent px-6 py-4 transition-all hover:scale-[1.02] group"
               >
-                <BookOpen size={16} />
-                Citește Regulamentul
+                <div>
+                  <span className="text-xs font-medium text-foreground/80">Vizitează</span>
+                  <p className="font-display text-xl font-bold text-foreground uppercase">Magazin</p>
+                </div>
+                <ChevronRight className="text-foreground/60 group-hover:translate-x-1 transition-transform" />
               </Link>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Features */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="font-display text-3xl md:text-4xl font-bold text-center mb-16 text-foreground"
+            className="text-center mb-16"
           >
-            De ce <span className="text-gradient-gold">Artemis</span>?
-          </motion.h2>
+            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase tracking-tight text-foreground mb-4">
+              De ce <span className="text-gradient-blue">Artemis</span>?
+            </h2>
+            <p className="text-muted-foreground max-w-md mx-auto">
+              Un server construit cu pasiune, pentru jucători care apreciază roleplay-ul de calitate.
+            </p>
+          </motion.div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {features.map((f, i) => (
               <motion.div
                 key={f.title}
@@ -107,12 +127,12 @@ const Index = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="group rounded-xl border border-border bg-gradient-card p-6 transition-all hover:border-primary/40 hover:glow-gold"
+                className="group rounded-2xl border border-border bg-gradient-card p-6 transition-all hover:border-primary/30 hover:glow-blue"
               >
-                <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3">
+                <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
                   <f.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground mb-2">
                   {f.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -127,27 +147,30 @@ const Index = () => {
       {/* CTA */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <div className="rounded-2xl border border-border bg-gradient-card p-12 md:p-16 text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Pregătit să intri în joc?
-            </h2>
-            <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-              Creează-ți cont, citește regulamentul și alătură-te comunității Artemis Romania.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/login"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground hover:glow-gold-strong transition-all"
-              >
-                Creează Cont
-              </Link>
-              <Link
-                to="/shop"
-                className="inline-flex items-center gap-2 rounded-lg border border-primary/30 px-8 py-3.5 text-sm font-semibold text-primary hover:bg-primary/10 transition-all"
-              >
-                <ShoppingBag size={16} />
-                Vizitează Magazinul
-              </Link>
+          <div className="rounded-2xl border border-border bg-gradient-card p-12 md:p-16 text-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent" />
+            <div className="relative z-10">
+              <h2 className="font-display text-4xl md:text-5xl font-bold uppercase tracking-tight text-foreground mb-4">
+                Pregătit să intri în joc?
+              </h2>
+              <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+                Creează-ți cont, citește regulamentul și alătură-te comunității Artemis Romania.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/login"
+                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground hover:glow-blue-strong transition-all"
+                >
+                  Creează Cont
+                </Link>
+                <Link
+                  to="/shop"
+                  className="inline-flex items-center gap-2 rounded-xl border border-border px-8 py-3.5 text-sm font-semibold text-foreground hover:bg-secondary transition-all"
+                >
+                  <ShoppingBag size={16} />
+                  Vizitează Magazinul
+                </Link>
+              </div>
             </div>
           </div>
         </div>
