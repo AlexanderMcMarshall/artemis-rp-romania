@@ -17,7 +17,7 @@ const sections: Section[] = [
     emoji: "1️⃣",
     title: "Reguli Generale Discord",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Respectul este obligatoriu față de toți membrii.</li>
         <li>Este interzis: rasismul, discriminarea, hate speech, jignirile grave, amenințările, bullying-ul.</li>
         <li>Glumele sunt permise, dar fără să deranjezi intenționat pe cineva.</li>
@@ -30,12 +30,12 @@ const sections: Section[] = [
     emoji: "2️⃣",
     title: "Spam / Flood / Tag Abuziv",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Spam-ul este interzis în orice canal.</li>
         <li>Flood-ul (mesaje repetate) este interzis.</li>
         <li>Tag-ul abuziv (@everyone / @here / staff) este strict interzis.</li>
         <li>Reclamele în DM către membri sunt interzise.</li>
-        <li className="text-accent">📌 Sancțiuni: mute / warn / ban.</li>
+        <li className="text-primary font-medium">📌 Sancțiuni: mute / warn / ban.</li>
       </ul>
     ),
   },
@@ -44,7 +44,7 @@ const sections: Section[] = [
     emoji: "3️⃣",
     title: "Reclamă și Promovare",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Este strict interzis să faci reclamă la: alte servere FiveM, alte Discord-uri, canale YouTube/TikTok fără acord staff, produse/servicii/crypto/scam.</li>
         <li>Link-urile dubioase sunt interzise.</li>
         <li className="text-destructive font-medium">📌 Reclamă = BAN direct.</li>
@@ -56,7 +56,7 @@ const sections: Section[] = [
     emoji: "4️⃣",
     title: "Canale și Utilizarea Lor",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Respectă scopul fiecărui canal, nu scrie în canal greșit.</li>
         <li>În canalele importante (anunțuri/reguli) nu ai voie să faci spam sau comentarii inutile.</li>
         <li>Nu ai voie să postezi conținut inutil, provocator sau ofensator.</li>
@@ -68,7 +68,7 @@ const sections: Section[] = [
     emoji: "5️⃣",
     title: "Conținut Interzis",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Este strict interzis să postezi: pornografie/nuditate, gore/violență extremă, conținut ilegal, scam/phishing, doxxing.</li>
         <li className="text-destructive font-medium">📌 Oricare dintre acestea = BAN PERMANENT.</li>
       </ul>
@@ -79,7 +79,7 @@ const sections: Section[] = [
     emoji: "6️⃣",
     title: "Reguli Voice Channel",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Respectă membrii în voice.</li>
         <li>Este interzis: să urli intenționat, să bagi muzică în microfon, trolling excesiv, voice changer deranjant.</li>
         <li>Staff-ul poate da mute/kick dacă deranjezi.</li>
@@ -91,7 +91,7 @@ const sections: Section[] = [
     emoji: "7️⃣",
     title: "Reguli pentru Nume / Profil",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Numele de pe Discord trebuie să fie decent.</li>
         <li>Este interzis să ai nume ofensator sau provocator.</li>
         <li>Poza de profil trebuie să fie decentă.</li>
@@ -104,7 +104,7 @@ const sections: Section[] = [
     emoji: "8️⃣",
     title: "Respectarea Staff-ului",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Deciziile staff-ului trebuie respectate.</li>
         <li>Nu ai voie să jignești staff-ul sau să comentezi sancțiunile în public.</li>
         <li>Dacă ai o problemă cu o decizie: deschizi ticket și vorbești civilizat.</li>
@@ -117,7 +117,7 @@ const sections: Section[] = [
     emoji: "9️⃣",
     title: "Tickets / Reclamații",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Pentru orice problemă folosește sistemul de ticket.</li>
         <li>Reclamațiile false sau făcute la nervi pot fi sancționate.</li>
         <li>Dacă deschizi ticket, ai obligația să vorbești respectuos.</li>
@@ -129,7 +129,7 @@ const sections: Section[] = [
     emoji: "🔟",
     title: "Reguli de Confidențialitate",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Este interzis să postezi conversații private fără acord.</li>
         <li>Este interzis să distribui informații din staff chat sau ticket-uri.</li>
         <li className="text-destructive font-medium">Orice leak de informații interne = BAN.</li>
@@ -138,10 +138,10 @@ const sections: Section[] = [
   },
   {
     id: "pedepse",
-    emoji: "1️⃣1️⃣",
+    emoji: "⚖️",
     title: "Pedepse",
     content: (
-      <div className="space-y-3 text-muted-foreground">
+      <div className="space-y-3 text-muted-foreground text-sm">
         <p>Staff-ul poate aplica sancțiuni în funcție de gravitate:</p>
         <div className="grid grid-cols-2 gap-2">
           <span>⚠️ Warn</span>
@@ -150,7 +150,7 @@ const sections: Section[] = [
           <span>⛔ Ban temporar</span>
           <span>❌ Ban permanent</span>
         </div>
-        <p className="text-accent text-sm">📌 Staff-ul are dreptul să sancționeze fără avertisment în cazuri grave.</p>
+        <p className="text-primary text-xs">📌 Staff-ul are dreptul să sancționeze fără avertisment în cazuri grave.</p>
       </div>
     ),
   },
@@ -159,7 +159,7 @@ const sections: Section[] = [
     emoji: "🎮",
     title: "Reguli Generale RP (FiveM)",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Respectul este obligatoriu.</li>
         <li>Fără injurii grave, rasism, discriminare, amenințări sau bullying.</li>
         <li>Limbajul vulgar moderat este permis doar în RP, dar fără exagerări.</li>
@@ -174,7 +174,7 @@ const sections: Section[] = [
     emoji: "🎭",
     title: "Reguli Roleplay (RP)",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li><strong className="text-foreground">Metagaming (MG):</strong> Interzis — nu folosi informații din afara RP.</li>
         <li><strong className="text-foreground">Powergaming (PG):</strong> Interzis — nu forța acțiuni imposibile.</li>
         <li><strong className="text-foreground">FailRP:</strong> Interzis — joacă realist și serios.</li>
@@ -191,7 +191,7 @@ const sections: Section[] = [
     emoji: "💬",
     title: "Reguli OOC",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Chat-ul OOC trebuie folosit minim și doar pentru informații importante.</li>
         <li>Certurile OOC în public sunt interzise.</li>
         <li>Problemele se rezolvă prin ticket / staff.</li>
@@ -203,7 +203,7 @@ const sections: Section[] = [
     emoji: "🎤",
     title: "Reguli Voice / Microfon (RP)",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Microfonul trebuie să fie clar.</li>
         <li>Interzis: voice changer exagerat, muzică în microfon, țipete și spam audio.</li>
         <li>Dacă nu ai microfon funcțional, nu ai voie să faci RP serios.</li>
@@ -215,9 +215,9 @@ const sections: Section[] = [
     emoji: "🚔",
     title: "Reguli Poliție / SMURD",
     content: (
-      <div className="space-y-4 text-muted-foreground">
+      <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
         <div>
-          <h4 className="font-display text-foreground mb-2">Poliție</h4>
+          <h4 className="font-display text-foreground font-semibold uppercase tracking-wide mb-2 text-sm">Poliție</h4>
           <ul className="space-y-1">
             <li>Abuzul de putere este interzis.</li>
             <li>Poliția trebuie să respecte procedurile RP.</li>
@@ -225,7 +225,7 @@ const sections: Section[] = [
           </ul>
         </div>
         <div>
-          <h4 className="font-display text-foreground mb-2">SMURD</h4>
+          <h4 className="font-display text-foreground font-semibold uppercase tracking-wide mb-2 text-sm">SMURD</h4>
           <ul className="space-y-1">
             <li>SMURD trebuie să ofere tratament realist.</li>
             <li>Nu ai voie să refuzi roleplay-ul fără motiv.</li>
@@ -240,7 +240,7 @@ const sections: Section[] = [
     emoji: "🔫",
     title: "Reguli Criminalitate / Mafii",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Jafurile și răpirile trebuie să aibă motiv RP.</li>
         <li>Este interzis să faci crime nonstop fără poveste RP.</li>
         <li>Nu ai voie să răpești persoane în safezone.</li>
@@ -253,15 +253,15 @@ const sections: Section[] = [
     emoji: "🏥",
     title: "Safezone (Zonă Sigură)",
     content: (
-      <div className="space-y-3 text-muted-foreground">
+      <div className="space-y-3 text-muted-foreground text-sm leading-relaxed">
         <p>În Safezone este interzis: să tragi, să lovești, să răpești, să fugi de poliție cu RP abuziv.</p>
         <p className="text-foreground font-medium">Exemple Safezone:</p>
-        <div className="grid grid-cols-2 gap-1 text-sm">
+        <div className="grid grid-cols-2 gap-1 text-xs">
           <span>• Spital</span>
           <span>• Secție Poliție</span>
           <span>• Primărie</span>
           <span>• Zone de spawn / job center</span>
-          <span>• Dealership / garaje (dacă sunt marcate)</span>
+          <span>• Dealership / garaje</span>
         </div>
       </div>
     ),
@@ -271,7 +271,7 @@ const sections: Section[] = [
     emoji: "🚗",
     title: "Reguli Vehicule / Condus",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Condusul trebuie să fie realist.</li>
         <li>Este interzis: să conduci ca pe GTA Online fără frică, să sari cu mașina fără consecințe.</li>
         <li>Pit maneuver fără RP = sancțiune.</li>
@@ -283,7 +283,7 @@ const sections: Section[] = [
     emoji: "💰",
     title: "Reguli Jafuri / Robbery",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Nu ai voie să faci jaf dacă nu sunt polițiști online (numărul minim stabilit de staff).</li>
         <li>Negocierile trebuie respectate.</li>
         <li>Este interzis să începi un jaf doar ca să faci PvP.</li>
@@ -296,7 +296,7 @@ const sections: Section[] = [
     emoji: "📹",
     title: "Reguli Streaming / Clipuri",
     content: (
-      <ul className="space-y-2 text-muted-foreground">
+      <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
         <li>Este permis streaming pe server.</li>
         <li>Este interzis să arăți: informații din admin menu, rapoarte/ticket-uri, discuții private cu staff.</li>
         <li className="text-destructive font-medium">Stream sniping = BAN.</li>
@@ -318,7 +318,7 @@ export default function Regulament() {
           }
         }
       },
-      { rootMargin: "-100px 0px -60% 0px" }
+      { rootMargin: "-120px 0px -60% 0px" }
     );
 
     sections.forEach((s) => {
@@ -338,12 +338,12 @@ export default function Regulament() {
     <div className="min-h-screen bg-gradient-dark">
       <Navbar />
 
-      <div className="pt-20 container mx-auto px-4">
-        <div className="py-12 text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-gradient-gold mb-4">
+      <div className="pt-28 container mx-auto px-4">
+        <div className="py-8 text-center">
+          <h1 className="font-display text-5xl md:text-6xl font-bold uppercase tracking-tight text-foreground mb-4">
             📜 Regulament
           </h1>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-xl mx-auto text-sm">
             Prin intrarea pe server accepți automat regulamentul de mai jos. Citește cu atenție!
           </p>
         </div>
@@ -351,7 +351,7 @@ export default function Regulament() {
         {/* Mobile TOC toggle */}
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="lg:hidden mb-4 flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm text-muted-foreground"
+          className="lg:hidden mb-4 flex items-center gap-2 rounded-xl border border-border px-4 py-2 text-sm text-muted-foreground glass"
         >
           <ChevronRight size={16} className={sidebarOpen ? "rotate-90 transition-transform" : "transition-transform"} />
           Cuprins
@@ -360,14 +360,14 @@ export default function Regulament() {
         <div className="flex gap-8 pb-24">
           {/* Sidebar */}
           <aside className={`${sidebarOpen ? "block" : "hidden"} lg:block w-72 shrink-0`}>
-            <div className="sticky top-24 rounded-xl border border-border bg-gradient-card p-4 max-h-[calc(100vh-8rem)] overflow-y-auto">
-              <h3 className="font-display text-sm font-semibold text-foreground mb-3">Cuprins</h3>
+            <div className="sticky top-28 rounded-2xl border border-border glass-strong p-4 max-h-[calc(100vh-8rem)] overflow-y-auto">
+              <h3 className="font-display text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Cuprins</h3>
               <nav className="space-y-0.5">
                 {sections.map((s) => (
                   <button
                     key={s.id}
                     onClick={() => scrollTo(s.id)}
-                    className={`w-full text-left rounded-lg px-3 py-2 text-sm transition-colors ${
+                    className={`w-full text-left rounded-xl px-3 py-2 text-xs transition-colors ${
                       active === s.id
                         ? "bg-primary/10 text-primary font-medium"
                         : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
@@ -382,18 +382,17 @@ export default function Regulament() {
 
           {/* Content */}
           <main className="flex-1 min-w-0">
-            <div className="space-y-8">
-              {sections.map((s, i) => (
+            <div className="space-y-6">
+              {sections.map((s) => (
                 <motion.section
                   key={s.id}
                   id={s.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.02 }}
-                  className="scroll-mt-28 rounded-xl border border-border bg-gradient-card p-6 md:p-8"
+                  className="scroll-mt-32 rounded-2xl border border-border bg-gradient-card p-6 md:p-8"
                 >
-                  <h2 className="font-display text-xl font-bold text-foreground mb-4">
+                  <h2 className="font-display text-xl font-bold uppercase tracking-wide text-foreground mb-4">
                     {s.emoji} {s.title}
                   </h2>
                   {s.content}
@@ -401,8 +400,8 @@ export default function Regulament() {
               ))}
             </div>
 
-            <div className="mt-12 rounded-xl border border-primary/30 bg-primary/5 p-6 text-center">
-              <p className="text-primary font-display font-semibold">
+            <div className="mt-10 rounded-2xl border border-primary/30 bg-primary/5 p-6 text-center">
+              <p className="text-primary font-display font-semibold uppercase tracking-wide text-sm">
                 ✅ Dacă nu cunoști o regulă, nu înseamnă că ești scutit de pedeapsă.
               </p>
             </div>

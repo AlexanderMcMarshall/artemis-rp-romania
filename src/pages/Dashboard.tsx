@@ -14,18 +14,17 @@ const StatusBar = ({ label, value, max, color, icon: Icon }: {
   return (
     <div>
       <div className="flex items-center justify-between mb-1.5">
-        <span className="flex items-center gap-2 text-sm text-muted-foreground">
+        <span className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground">
           <Icon size={14} /> {label}
         </span>
-        <span className="text-sm font-medium text-foreground">{value}/{max}</span>
+        <span className="text-xs font-medium text-foreground">{value}/{max}</span>
       </div>
-      <div className="h-2.5 rounded-full bg-background overflow-hidden">
+      <div className="h-2 rounded-full bg-background overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}
           transition={{ duration: 1, ease: "easeOut" }}
           className={`h-full rounded-full ${color}`}
-          style={{ boxShadow: `0 0 12px ${color === "bg-success" ? "hsl(160 60% 45% / 0.5)" : color === "bg-primary" ? "hsl(38 92% 50% / 0.5)" : "hsl(200 80% 50% / 0.5)"}` }}
         />
       </div>
     </div>
@@ -33,7 +32,6 @@ const StatusBar = ({ label, value, max, color, icon: Icon }: {
 };
 
 export default function Dashboard() {
-  // Mock data — will be connected to backend later
   const player = {
     name: "ArtemisPlayer",
     job: "Taxi Driver",
@@ -52,9 +50,9 @@ export default function Dashboard() {
     <div className="min-h-screen bg-gradient-dark">
       <Navbar />
 
-      <div className="pt-20 container mx-auto px-4 pb-24">
-        <div className="py-8">
-          <h1 className="font-display text-3xl font-bold text-gradient-gold mb-1">
+      <div className="pt-28 container mx-auto px-4 pb-24">
+        <div className="py-6">
+          <h1 className="font-display text-4xl font-bold uppercase tracking-tight text-foreground mb-1">
             Panou Jucător
           </h1>
           <p className="text-muted-foreground text-sm">
@@ -68,20 +66,20 @@ export default function Dashboard() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="rounded-xl border border-border bg-gradient-card p-6"
+            className="rounded-2xl border border-border bg-gradient-card p-6"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="h-16 w-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
+              <div className="h-16 w-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
                 <User className="h-8 w-8 text-primary" />
               </div>
               <div>
-                <h2 className="font-display text-lg font-bold text-foreground">{player.name}</h2>
+                <h2 className="font-display text-xl font-bold uppercase text-foreground">{player.name}</h2>
                 <p className="text-sm text-muted-foreground flex items-center gap-1">
                   <Briefcase size={14} /> {player.job}
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-4 text-sm">
+            <div className="flex items-center gap-4 text-xs">
               <span className="flex items-center gap-1 text-primary">
                 <TrendingUp size={14} /> Level {player.level}
               </span>
@@ -99,10 +97,10 @@ export default function Dashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="rounded-xl border border-border bg-gradient-card p-6"
+            className="rounded-2xl border border-border bg-gradient-card p-6"
           >
-            <h3 className="font-display text-sm font-semibold text-foreground mb-4 flex items-center gap-2">
-              <Wallet size={16} className="text-primary" /> Portofel
+            <h3 className="font-display text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4 flex items-center gap-2">
+              <Wallet size={14} className="text-primary" /> Portofel
             </h3>
             <div className="space-y-3">
               <div className="flex justify-between items-center">
@@ -114,7 +112,7 @@ export default function Dashboard() {
                 <span className="text-lg font-bold text-foreground">${player.bank.toLocaleString()}</span>
               </div>
               <div className="border-t border-border pt-3 flex justify-between items-center">
-                <span className="text-sm text-primary font-medium">Artemis Coins</span>
+                <span className="text-sm text-accent font-medium">Artemis Coins</span>
                 <span className="text-lg font-bold text-gradient-gold">{player.coins}</span>
               </div>
             </div>
@@ -125,45 +123,45 @@ export default function Dashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="rounded-xl border border-border bg-gradient-card p-6 md:col-span-2 lg:col-span-1"
+            className="rounded-2xl border border-border bg-gradient-card p-6 md:col-span-2 lg:col-span-1"
           >
-            <h3 className="font-display text-sm font-semibold text-foreground mb-4 flex items-center gap-2">
-              <Shield size={16} className="text-primary" /> Status
+            <h3 className="font-display text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4 flex items-center gap-2">
+              <Shield size={14} className="text-primary" /> Status
             </h3>
             <div className="space-y-4">
               <StatusBar label="Viață" value={player.health} max={100} color="bg-success" icon={Heart} />
-              <StatusBar label="Foame" value={player.hunger} max={100} color="bg-primary" icon={Utensils} />
-              <StatusBar label="Sete" value={player.thirst} max={100} color="bg-blue-500" icon={Droplets} />
+              <StatusBar label="Foame" value={player.hunger} max={100} color="bg-accent" icon={Utensils} />
+              <StatusBar label="Sete" value={player.thirst} max={100} color="bg-primary" icon={Droplets} />
             </div>
           </motion.div>
         </div>
 
         {/* Quick Actions */}
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
           <Link
             to="/shop"
-            className="rounded-xl border border-border bg-gradient-card p-5 text-center transition-all hover:border-primary/40 hover:glow-gold"
+            className="rounded-2xl border border-border bg-gradient-card p-5 text-center transition-all hover:border-primary/30 hover:glow-blue"
           >
             <Wallet className="mx-auto mb-2 h-6 w-6 text-primary" />
             <span className="text-sm font-medium text-foreground">Magazin & Donații</span>
           </Link>
           <Link
             to="/regulament"
-            className="rounded-xl border border-border bg-gradient-card p-5 text-center transition-all hover:border-primary/40 hover:glow-gold"
+            className="rounded-2xl border border-border bg-gradient-card p-5 text-center transition-all hover:border-primary/30 hover:glow-blue"
           >
             <Shield className="mx-auto mb-2 h-6 w-6 text-primary" />
             <span className="text-sm font-medium text-foreground">Regulament</span>
           </Link>
           <button
-            className="rounded-xl border border-destructive/30 bg-gradient-card p-5 text-center transition-all hover:border-destructive/60"
+            className="rounded-2xl border border-destructive/20 bg-gradient-card p-5 text-center transition-all hover:border-destructive/40"
           >
             <LogOut className="mx-auto mb-2 h-6 w-6 text-destructive" />
             <span className="text-sm font-medium text-destructive">Deconectare</span>
           </button>
         </div>
 
-        <div className="mt-8 rounded-xl border border-primary/20 bg-primary/5 p-6 text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-6 rounded-2xl border border-primary/20 bg-primary/5 p-5 text-center">
+          <p className="text-xs text-muted-foreground">
             ⚠️ Datele afișate sunt demonstrative. Conectează-te la server pentru date reale.
           </p>
         </div>
