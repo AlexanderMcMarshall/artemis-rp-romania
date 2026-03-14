@@ -127,7 +127,7 @@ const Index = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="group rounded-2xl border border-border bg-gradient-card p-6 transition-all hover:border-primary/30 hover:glow-blue"
+                className="group rounded-2xl border border-border bg-gradient-card p-6 transition-all hover:border-primary/30 hover:glow-red"
               >
                 <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
                   <f.icon className="h-6 w-6 text-primary" />
