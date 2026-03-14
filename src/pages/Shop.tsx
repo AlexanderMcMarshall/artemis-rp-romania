@@ -75,8 +75,8 @@ export default function Shop() {
               transition={{ delay: i * 0.1 }}
               className={`relative rounded-2xl border p-6 transition-all ${
                 pkg.featured
-                  ? "border-primary/40 bg-gradient-card glow-blue"
-                  : "border-border bg-gradient-card hover:border-primary/30 hover:glow-blue"
+                  ? "border-primary/40 bg-gradient-card glow-red"
+                  : "border-border bg-gradient-card hover:border-primary/30 hover:glow-red"
               }`}
             >
               {pkg.featured && (
